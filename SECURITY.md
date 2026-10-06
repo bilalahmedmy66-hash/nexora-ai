@@ -6,18 +6,24 @@
 
 If a secret is committed by mistake: rotate it immediately (removing it from history is not enough).
 
-## Planned controls
+## Controls
 
 | Control | Status |
 |---------|--------|
-| Password hashing (argon2 or bcrypt) | PLANNED |
-| JWT access and refresh tokens | PLANNED |
-| Role-based permissions on every endpoint | PLANNED |
-| Input validation on every endpoint | PLANNED |
-| Audit logging of all writes | PLANNED |
-| Rate limiting | PLANNED |
-| CORS allowlist | PLANNED |
-| Secrets via environment only | IMPLEMENTED (`.env.example` pattern) |
+| Password hashing (argon2) | TESTED |
+| Password policy (10+ chars, letter and number) | TESTED |
+| JWT access and refresh tokens, type-checked | TESTED |
+| Role-based permissions on every endpoint | TESTED |
+| Input validation (Pydantic) on every endpoint | TESTED |
+| Audit logging of logins and user changes | TESTED |
+| No user enumeration on login (same error, similar timing) | TESTED |
+| Deactivated users lose access immediately | TESTED |
+| Production refuses weak JWT secret | IMPLEMENTED |
+| Secrets via environment only | IMPLEMENTED |
+| CORS allowlist | IMPLEMENTED (not yet tested) |
+| Refresh token revocation / logout | PLANNED |
+| Login rate limiting and lockout | PLANNED |
+| Security headers, HTTPS enforcement | PLANNED |
 | Dependency scanning | PLANNED |
 
 ## Reporting a vulnerability
