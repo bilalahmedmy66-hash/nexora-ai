@@ -22,6 +22,7 @@ If a secret is committed by mistake: rotate it immediately (removing it from his
 | Secrets via environment only | IMPLEMENTED |
 | CORS allowlist | IMPLEMENTED (not yet tested) |
 | Refresh token revocation / logout | PLANNED |
+| Browser token storage: refresh token in localStorage (readable by any XSS bug); move to httpOnly cookies before production | PLANNED |
 | Login rate limiting and lockout | PLANNED |
 | Security headers, HTTPS enforcement | PLANNED |
 | Dependency scanning | PLANNED |

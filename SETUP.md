@@ -50,3 +50,17 @@ cd backend
 ## Frontend
 
 Coming in Phase 2b.
+
+## Frontend
+
+Open a **second** PowerShell window (the backend keeps running in the first one):
+
+```powershell
+cd $HOME\projects\nexora-ai\frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 and sign in with your admin account. The dev server forwards `/api` calls to the backend on port 8000, so the backend must be running.
+
+Other commands: `npm test` (run the frontend tests), `npm run build` (type-check and production build), `npm run preview`.
